@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D0EEF9;
+}
+
+
+tr:nth-child(ODD) {
+  background-color: #F2FAFC;
+}
+</style>
+</head>
+<body>
+
+<h2>LAB INFRASTRUCTRE</h2>
+
+<table>
+  <tr>
+    <th>Sno</th>
+    <th>Room_Description</th>
+    <th>Description</th>
+    <th>In_charge</th>
+    <th>Technical_Programmers</th>
+    <th>Rooms_equipped_with</th>
+
+    
+    
+    
+  </tr>
+  {% block content %}
+  {% for i in obj %} 
+
+  <tr>
+    
+    <td>{{ i.Sno}}</td>
+    <td>{{ i.Room_Description}}</td>
+    <td>{{ i.Description}}</td>
+    <td>{{ i.In_charge}}</td>
+    <td>{{ i.Technical_Programmers}}</td>
+    <td>{{ i.Rooms_equipped_with}}</td>
+ 
+    {% endfor %}
+    {% endblock content %}
+  </tr>
+  
+</table>
+
+</body>
+</html>
